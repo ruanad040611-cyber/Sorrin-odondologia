@@ -1,0 +1,117 @@
+:root {
+    --azul: #5A738E;
+    --preto: #1C1C1E;
+    --cinza: #6E6E73;
+    --cinza_claro: #BFC0C0;
+    --branco: #F0F1F2;
+}
+body {
+    background-image: linear-gradient(to bottom, var(--cinza_claro), var(--azul));
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+* {
+    box-sizing: border-box;
+}
+header div {
+    background-color: var(--branco);
+    display: flex;
+    flex-direction: row-reverse;
+}
+header img {
+    height: 24px;
+    margin: 10px;
+}
+header {
+    text-align: center;
+    color: var(--azul);
+}
+header h1 {
+    background-image: linear-gradient(to bottom, white, whitesmoke);
+    border: #5A738E solid 1px;
+    padding: clamp(32px, 8vw, 100px) 16px;
+    font-size: clamp(24px, 4vw, 48px);
+    margin-top: 1px;
+}
+main div {
+    background-image: linear-gradient(to bottom, white, whitesmoke);
+    border: var(--preto) solid 1px;
+    padding: 1%;
+    margin-top: 1px;
+}
+main span {
+    display: block;
+    background-image: linear-gradient(to bottom, white, whitesmoke);
+    border: #5A738E solid 1px;
+    padding: 1%;
+    margin-top: 1px;
+    border-radius: 10px;
+}
+main span nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+main span nav img {
+    max-width: 40%;
+    height: auto;
+}
+iframe {
+    display: block;
+    width: min(100%, 600px);
+    height: 350px;
+    margin: 0;
+    border: 0;
+}
+.local {
+    background-image: linear-gradient(to bottom, var(--branco), var(--cinza_claro));
+    border: #1C1C1E solid 3px;
+}
+footer {
+    background-color: var(--azul);
+    color: var(--branco);
+    padding: 18px 24px;
+    margin-top: 24px;
+    text-align: center;
+    border-top: 4px solid var(--preto);
+}
+footer h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+footer a {
+    color: var(--branco);
+    font-weight: bold;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: white;
+}
+
+@media (max-width: 600px) {
+    main div,
+    main span {
+        padding: 16px;
+    }
+    main span nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+    main span nav img,
+    iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+    iframe {
+        height: 280px;
+    }
+    footer {
+        padding: 16px;
+        font-size: 14px;
+    }
+}
